@@ -17,7 +17,7 @@ function apps() {
     })
   );
   app.use(bodyParser.json());
-  app.use(protect);
+  // app.use(protect);
 
   app.use("/upload", fileUploadRouter);
 
