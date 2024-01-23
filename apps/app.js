@@ -29,7 +29,7 @@ function apps() {
   app.get("*", (req, res) => {
     return res.status(404).send("API Not found.");
   });
-  app.listen(process.env.PORT, () => {
+  http.createServer(app).listen(process.env.PORT, () => {
     console.log("START SERVER STICKER IMAGE AT PORT 3000");
   });
 }
