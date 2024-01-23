@@ -5,6 +5,7 @@ import cors from "cors";
 import { protect } from "./middlewares/jwtIntercepter.js";
 import { errorHandler, logErrors } from "./common/errorHandler.js";
 import fileUploadRouter from "./controllers/upload.js";
+import http from "http";
 
 dotenv.config();
 const app = express();
