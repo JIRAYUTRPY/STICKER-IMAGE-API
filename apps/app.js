@@ -25,7 +25,8 @@ function apps() {
   app.use(logErrors);
   app.use(errorHandler);
   app.get("/", (req, res) => {
-    res.send("STICKER-IMAGE-API");
+    res.header("Content-type", "text/html");
+    return res.end("<h1>STICKER IMAGE API</h1>");
   });
   app.get("*", (req, res) => {
     return res.status(404).send("API Not found.");
